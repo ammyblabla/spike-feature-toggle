@@ -7,5 +7,6 @@ import lombok.Data;
 @Data
 public class Room {
     private Integer id;
-    private RoomStatus.Status status;
+    private RoomEnum.Status status;
+    private RoomEnum.Type type;
 }

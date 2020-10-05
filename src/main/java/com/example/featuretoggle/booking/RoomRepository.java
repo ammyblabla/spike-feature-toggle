@@ -4,8 +4,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static com.example.featuretoggle.booking.RoomStatus.Status.AVAILABLE;
+import static com.example.featuretoggle.booking.RoomEnum.Status.AVAILABLE;
+import static com.example.featuretoggle.booking.RoomEnum.Type.TWIN;
+
 
 @Repository
 public class RoomRepository {
@@ -13,7 +16,7 @@ public class RoomRepository {
 
     public RoomRepository() {
         for (int i=0; i<10; i++) {
-            rooms.add(Room.builder().id(i+1).status(AVAILABLE).build());
+            rooms.add(Room.builder().id(i+1).status(AVAILABLE).type(RoomEnum.getRandomType()).build());
         }
     }
 
@@ -29,5 +32,11 @@ public class RoomRepository {
         Integer id = room.getId();
         rooms.set(id-1, room);
         return getRoom(id);
+    }
+
+    public List<Room> findRoomByType(RoomEnum.Type type) {
+        return rooms.stream()
+                .filter(room -> type.equals(room.getType()))
+                .collect(Collectors.toList());
     }
 }
