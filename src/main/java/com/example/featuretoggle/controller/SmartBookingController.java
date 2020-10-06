@@ -1,5 +1,8 @@
-package com.example.featuretoggle.booking;
+package com.example.featuretoggle.controller;
 
+import com.example.featuretoggle.model.Room;
+import com.example.featuretoggle.model.RoomEnum;
+import com.example.featuretoggle.service.SmartBookingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

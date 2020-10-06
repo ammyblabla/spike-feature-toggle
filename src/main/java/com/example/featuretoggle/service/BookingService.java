@@ -1,12 +1,14 @@
-package com.example.featuretoggle.booking;
+package com.example.featuretoggle.service;
 
+import com.example.featuretoggle.model.Room;
+import com.example.featuretoggle.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.example.featuretoggle.booking.RoomEnum.Status.AVAILABLE;
-import static com.example.featuretoggle.booking.RoomEnum.Status.BOOKED;
+import static com.example.featuretoggle.model.RoomEnum.Status.AVAILABLE;
+import static com.example.featuretoggle.model.RoomEnum.Status.BOOKED;
 
 @Service
 @RequiredArgsConstructor

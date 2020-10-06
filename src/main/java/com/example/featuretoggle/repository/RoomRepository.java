@@ -1,13 +1,14 @@
-package com.example.featuretoggle.booking;
+package com.example.featuretoggle.repository;
 
+import com.example.featuretoggle.model.Room;
+import com.example.featuretoggle.model.RoomEnum;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.featuretoggle.booking.RoomEnum.Status.AVAILABLE;
-import static com.example.featuretoggle.booking.RoomEnum.Type.TWIN;
+import static com.example.featuretoggle.model.RoomEnum.Status.AVAILABLE;
 
 
 @Repository

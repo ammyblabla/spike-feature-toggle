@@ -1,5 +1,6 @@
-package com.example.featuretoggle.booking;
+package com.example.featuretoggle.model;
 
+import com.example.featuretoggle.model.RoomEnum;
 import lombok.Builder;
 import lombok.Data;
 

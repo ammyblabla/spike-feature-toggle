@@ -1,14 +1,14 @@
-package com.example.featuretoggle.booking;
+package com.example.featuretoggle.model;
 
 import java.util.Random;
 
 public class RoomEnum {
-    enum Status {
+    public enum Status {
         AVAILABLE,
         BOOKED
     }
 
-    enum Type {
+    public enum Type {
         TWIN,
         QUEEN,
         KING,
