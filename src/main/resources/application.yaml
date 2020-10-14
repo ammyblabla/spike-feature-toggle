@@ -1,3 +1,10 @@
-spring:
-  profiles:
-    include: holidaySeason
+togglz:
+  enabled: true
+  features:
+    HOLIDAY:
+      enabled: true
+  console:
+    enabled: true
+    secured: false
+    use-management-port: false
+    path: /togglz-console
